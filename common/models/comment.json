@@ -1,0 +1,27 @@
+{
+  "name": "Comment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "productId": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "string",
+      "required": true
+    },
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

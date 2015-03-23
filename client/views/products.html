@@ -1,0 +1,25 @@
+<h1>Products</h1>
+<hr>
+<form name="productForm" novalidate ng-submit="addProduct()">
+
+  <div class="form-group">
+    <label for="nameinput">Name</label>
+    <input type="text" id="nameinput" ng-model="newProduct.name" class="form-control" placeholder="Enter product name" required autocomplete="off">
+  </div>
+  <div class="form-group">
+    <label for="descriptioninput">Description</label>
+    <input type="text" id="descriptioninput" ng-model="newProduct.description" class="form-control" placeholder="Enter description" autocomplete="off">
+  </div>
+  <div class="form-group">
+    <label for="priceinput">Price</label>
+    <input type="text" id="priceinput" ng-model="newProduct.price" class="form-control" placeholder="Enter price" autocomplete="off">
+  </div>
+  
+  <button class="btn btn-default" ng-disabled="productForm.$invalid">Add</button>
+</form>
+<hr>
+<div class="list-group">
+  <a class="list-group-item" ng-repeat="product in products"><h2>{{product.name}}</h2><p>${{product.price}}</p><p>{{product.description}}</p>&nbsp;
+    <i class="glyphicon glyphicon-remove pull-right"
+        ng-click="removeProduct(product)"></i></a>
+</div>
